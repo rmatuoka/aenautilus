@@ -1,0 +1,31 @@
+<%content_for :page_title do%>
+	- Vídeos - <%=@Video.title%>
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "videos" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=@Video.title%></div>
+	<p id="Descricao"><%=@Video.description%></p>
+</div>	
+
+<div id="Content">
+	<%if !@Video.blank?%>
+		<p align="center">
+		<object width="480" height="385">
+			<param name="movie" value="<%=@Link%>?fs=1&amp;hl=pt_BR"></param>
+			<param name="allowFullScreen" value="true"></param>
+			<param name="allowscriptaccess" value="always"></param>
+			<embed src="<%=@Link%>?fs=1&amp;hl=pt_BR" type="application/x-shockwave-flash" 
+				allowscriptaccess="always" 
+				allowfullscreen="true" 
+				width="480" height="385"></embed>
+		</object>
+		<br><br><br>
+		<%=link_to image_tag("btn_youtube.png"), "http://www.youtube.com/user/nautilusequipamentos", :target => "_blank"%>
+		</p>
+	<%end%>
+</div>

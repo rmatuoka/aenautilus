@@ -1,0 +1,30 @@
+<%content_for :page_title do%>
+	- Pesquisa de avaliação Nautilus 2012
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "institucional" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"></div>
+</div>	
+
+<div id="Content">
+	
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<iframe id="iPresquisa" src="https://docs.google.com/spreadsheet/embeddedform?formkey=dGNzRzgzMk4waVQ5R3FqSmtTc0ItdkE6MQ" width="550" height="3721" frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" style="background:red;">Loading...</iframe>
+		<script>
+		jQuery.noConflict();
+		jQuery().ready(function () {
+		    jQuery("#iframeID").ready(function () {
+	    		jQuery('#iPresquisa').contents().find('.ss-base-body').css("background","none");
+			});
+		});
+		</script>
+	</div>
+</div>
+

@@ -1,0 +1,64 @@
+#Depoimento
+{
+	width:371px;
+	height:223px;
+	display:inline-block;
+	padding-right:40px;
+	padding-left:40px;
+	border-right:1px solid #d9cabd;
+	vertical-align:top;
+}
+
+	#Depoimento .Imagem
+	{
+		
+	}
+	
+	#Depoimento p
+	{
+		font-family:Verdana;
+		font-size:10px;
+		color:#6C665F;
+	}
+	
+	#Depoimento .Nome
+	{
+		font-family:Cantarell;
+		font-size:16px;
+		color:#5097B6;
+		float:right;
+		vertical-align:middle;
+	}
+	
+	#Depoimento .Infos
+	{
+		font-family:Cantarell;
+		font-size:12px;
+		color:#9BBFCB;
+		float:right;
+		vertical-align:middle;
+	}
+	
+	#Formulario
+{
+	width:468px;
+	text-align:left;
+	margin:auto;
+}
+
+	#Formulario img
+	{
+		vertical-align:middle;
+	}
+	
+	
+	#Formulario .label
+	{
+		width:97px;
+		display:inline-block;
+		text-align:right;
+		margin-right:21px;
+		font-size:14px;
+		font-family:Cantarell;
+		color:#8D847A;
+	}

@@ -1,0 +1,44 @@
+#Content #Texto #Parametros
+{
+	font-family:Verdana;
+	font-size:12px;
+	color:#6C665F;
+	float:right;
+	height:auto;
+	min-height:30px;
+}
+
+	#Lista
+	{
+		margin-top:47px;
+		clear:both;
+	}
+	
+		#Lista .Item
+		{
+			width:560px;
+			height:auto;
+			min-height:80px;
+			margin-bottom:15px;
+		}
+		
+			#Lista .Item .Nome
+			{
+				font-size:18px;
+				font-family:Cantarell;
+				color:#1E7DA7;
+				display:block;
+			}
+			
+			#Lista .Item .Dados
+			{
+				font-size:10px;
+				font-family:Verdana;
+				color:#6C665F;
+			}
+			
+			#Lista .Claro
+			{
+				background-color:#F7e5d5;
+			}
+	

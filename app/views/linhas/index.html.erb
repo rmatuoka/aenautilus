@@ -1,0 +1,19 @@
+<%content_for :page_title do%>
+	- Produtos
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "produtos" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/produtos.png"%></div>
+	<p id="Descricao">Conheça toda a linha de produtos Nautilus, escolha linha desejada e navegue a vontade.</p>
+</div>	
+
+<div id="Content">
+	<%=link_to image_tag("produtos/linha1.jpg"), linha_path(1)%>
+	<%=link_to image_tag("produtos/linha2.jpg"), linha_path(2)%>
+	<%=link_to image_tag("produtos/linha3.jpg"), linha_path(3)%>
+</div>

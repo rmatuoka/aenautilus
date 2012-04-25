@@ -1,0 +1,82 @@
+<%content_for :page_title do%>
+	- Produtos - <%=@Section.title%> - <%=@Categoria.title%> - <%=@Produto.title%>
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "produtos" %>
+	<%=stylesheet_link_tag "jqzoom" %>
+	
+	<%=javascript_include_tag "jqzoom.pack.1.0.1.js"%>
+	
+	<script type="text/javascript">
+
+	$j(document).ready(
+		function(){
+			var options = {
+           		zoomWidth: 300,
+                zoomHeight: 200,
+                position : "right",
+                yOffset :-100,
+                xOffset :0,
+                title :false
+
+};
+
+
+			$j(".jqzoom").jqzoom(options);
+		});
+	</script>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=@Produto.title%></div>
+	<!-- <p id="Descricao">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> -->
+</div>	
+
+<div id="Content">
+	<div id="FotoProduto">
+		<center>
+				<%
+				counter = 0
+				@Imagens.each do |img|%>
+					<%if counter == 1%>
+						<br><br>
+					<%end%>
+					<%if counter == 0%>
+					<a href='<%=SERVIDOR + img.image.url()%>' class="jqzoom" style="" title="<%=img.legend%>">
+						<img src='<%=SERVIDOR + img.image.url("p_medio")%>'  title="<%=img.legend%>">
+					</a>
+						<%#=lightbox_image_tag(SERVIDOR + img.image.url("p_medio"), SERVIDOR + img.image.url(), :title => img.legend)%>
+					<%else%>
+						<a href='<%=SERVIDOR + img.image.url()%>' class="jqzoom" style="" title="<%=img.legend%>">
+							<img src='<%=SERVIDOR + img.image.url("thumb")%>'  title="<%=img.legend%>">
+						</a>
+						<%#=lightbox_image_tag(SERVIDOR + img.image.url("thumb"), SERVIDOR + img.image.url(), :title => img.legend)%>
+					<%end%>
+					
+					<%counter = counter + 1%>
+				<%end%>
+				
+			</center>
+	</div>
+	
+	<div id="Texto">
+		<p>
+			<%=@Produto.description%><br>
+			<br>
+			
+			<%if @Produto.pdf.url() != "/pdfs/original/missing.png"%>
+				<%=%>
+				<a href='<%=SERVIDOR + @Produto.pdf.url()%>' target="_blank"><%=image_tag "produtos/btn_info_tecnica.png"%></a>
+			<%end%>
+			
+			<center>
+				<br><br><br>
+				<%=link_to image_tag("btn_voltar.png"), linha_path(@Section)%>
+			</center>
+		</p>
+	</div>
+	
+	
+</div>

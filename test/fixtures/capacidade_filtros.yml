@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vazao_min: 9.99
+  vazao_max: 9.99
+  modelo1: MyString
+  modelo2: MyString
+  vazao_nominal: 9.99
+  vazao_nominal2: 9.99
+  ralo_fundo: MyString
+  motobomba: MyString
+  motobomba2: MyString
+  succao: MyString
+  succao2: MyString
+  recalque: 9.99
+  recalque2: 9.99
+  motobomba_aspiracao: MyString
+  motobomba_aspiracao2: MyString
+  tubulacao_succao: MyString
+  tubulacao_succao: MyString
+  prefiltro: MyString
+  prefiltro2: MyString
+
+two:
+  vazao_min: 9.99
+  vazao_max: 9.99
+  modelo1: MyString
+  modelo2: MyString
+  vazao_nominal: 9.99
+  vazao_nominal2: 9.99
+  ralo_fundo: MyString
+  motobomba: MyString
+  motobomba2: MyString
+  succao: MyString
+  succao2: MyString
+  recalque: 9.99
+  recalque2: 9.99
+  motobomba_aspiracao: MyString
+  motobomba_aspiracao2: MyString
+  tubulacao_succao: MyString
+  tubulacao_succao: MyString
+  prefiltro: MyString
+  prefiltro2: MyString

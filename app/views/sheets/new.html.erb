@@ -1,0 +1,109 @@
+<%content_for :page_title do%>
+	- Planilha
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "planilha" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo">Planilha</div>
+</div>	
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<p>
+			<%form_for(@Sheet) do |f|%>
+				<!-- DADOS CLIENTE -->
+				Digite o nome do cliente ou da obra<br>
+				<%=f.text_field :cliente%>
+				<br><br>
+		
+				Digite o endereço:<br>
+				<%=f.text_field :endereco%>
+				<br><br>
+				
+				<!-- DADOS FILTRACAO -->
+				Comprimento da piscina (m):<br>
+				<%=f.text_field :comprimento%>
+				<br><br>
+				
+				Largura da piscina (m):<br>
+				<%=f.text_field :largura%>
+				<br><br>
+				
+				Profundidade Mínima (m):<br>
+				<%=f.text_field :profundidade_minima%>
+				<br><br>
+				
+				Profundidade Máxima(m):<br>
+				<%=f.text_field :profundidade_max%>
+				<br><br>
+				
+				Uso da Piscina (m):<br>
+				<%=f.radio_button :uso_piscina, 1 %> Comercial
+				<%=f.radio_button :uso_piscina, 2 %> Residencial  
+				<br><br>
+				
+				<!-- DADOS AQUECIMENTO -->
+				Temperatura desejada (de 20ºC à 40ºC):<br>
+				<%=f.text_field :temperatura_desejada%>
+				<br><br>
+				
+				Você vai utilizar a piscina:<br>
+				<%=f.radio_button :utilizacao_ano, 1 %> O ano todo
+				<%=f.radio_button :utilizacao_ano, 2 %> Menos no inverno
+				<br><br>
+				<%=f.radio_button :utilizacao_mes, 1 %> Mês todo
+				<%=f.radio_button :utilizacao_mes, 2 %> Apenas fins de semana 
+				
+				<br><br> 
+				Tipo de Construção:<br>
+				<%=f.radio_button :tipo_construcao, 1 %> Aberta
+				<%=f.radio_button :tipo_construcao, 2 %> Coberta e fechada
+				<br><br>
+				
+				Utiliza capa térmica?<br>
+				<%=f.radio_button :capa_termica, 1 %> Sim
+				<%=f.radio_button :capa_termica, 2 %> Não
+				<br><br>
+				
+				Velocidade do vento<br>
+				<%=f.radio_button :velocidade_vento, 1 %> Nenhum
+				<%=f.radio_button :velocidade_vento, 2 %> Fraco
+				<%=f.radio_button :velocidade_vento, 3 %> Moderado
+				<%=f.radio_button :velocidade_vento, 4 %> Forte
+				<br><br>
+				
+				Temperatura ambiente<br>
+				<%=f.radio_button :temperatura_ambiente, 10 %> Frio
+				<%=f.radio_button :temperatura_ambiente, 15 %> Temperado
+				<%=f.radio_button :temperatura_ambiente, 20 %> Quente
+				<%=f.radio_button :temperatura_ambiente, 25 %> Muito quente
+				<br><br>
+				
+				<!-- Custos -->
+				Custo da Energia Elétrica (R$/KWh):<br>
+				<%=f.text_field :custo_energia%>
+				<br><br>
+				
+				Gás Liquefeito de Petróleo GLP (R$/Kg):<br>
+				<%=f.text_field :custo_glp%>
+				<br><br>
+				
+				Gás Natural GN (R$/m):<br>
+				<%=f.text_field :custo_gn%>
+				<br><br>
+				
+				Diesel (R$/L):<br>
+				<%=f.text_field :custo_diesel%>
+				<br><br>
+				
+				<button type="submit">Salvar</button>
+			<%end%>
+		</p>
+	</div>
+</div>

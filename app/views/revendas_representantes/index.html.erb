@@ -1,0 +1,27 @@
+<%content_for :page_title do%>
+	- Consulta de Revendedores e Representantes
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "revendas" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/revendas_representantes.png"%></div>
+</div>	
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<p>
+			Escolha abaixo que área você gostaria de consultar:<br>
+			<br>
+			<br>
+		</p>
+		<%=link_to image_tag("img_revendas.jpg", :style => "margin-right:10px;"), revendas_path%>
+
+		<%=link_to image_tag("img_representantes.jpg"), representantes_path%>
+	</div>
+</div>

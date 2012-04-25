@@ -1,0 +1,2 @@
+module RevendasHelper
+end

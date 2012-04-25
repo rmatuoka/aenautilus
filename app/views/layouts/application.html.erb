@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Nautilus - Filtros para piscinas, capas, motobombas, aquecedores geradores de cloro  <%=yield :page_title%></title>
+	<%=stylesheet_link_tag "geral" %>
+	<%= stylesheet_link_tag "lightbox" %>
+	<%= javascript_include_tag :defaults %>
+	
+	<%=javascript_include_tag "jquery"%>
+	<%=javascript_include_tag "jhover"%>
+	<%=javascript_include_tag "jcycle"%>
+	<%=yield :head%>
+<script>
+$j(document).ready(function() {
+	//On Hover Over
+	function megaHoverOver(){
+		$j(this).find(".sub").stop().fadeTo('fast', 1).show(); //Find sub and fade it in
+		(function($j) {
+			//Function to calculate total width of all ul's
+			jQuery.fn.calcSubWidth = function() {
+				rowWidth = 0;
+				//Calculate row
+				$j(this).find("ul").each(function() { //for each ul...
+					rowWidth += $j(this).width(); //Add each ul's width together
+				});
+			};
+		})(jQuery); 
+	
+		if ( $j(this).find(".row").length > 0 ) { //If row exists...
+	
+			var biggestRow = 0;	
+	
+			$j(this).find(".row").each(function() {	//for each row...
+				$j(this).calcSubWidth(); //Call function to calculate width of all ul's
+				//Find biggest row
+				if(rowWidth > biggestRow) {
+					biggestRow = rowWidth;
+				}
+			});
+	
+			$j(this).find(".sub").css({'width' :biggestRow}); //Set width
+			$j(this).find(".row:last").css({'margin':'0'});  //Kill last row's margin
+	
+		} else { //If row does not exist...
+	
+			$j(this).calcSubWidth();  //Call function to calculate width of all ul's
+			$j(this).find(".sub").css({'width' : rowWidth}); //Set Width
+	
+		}
+	}
+	//On Hover Out
+	function megaHoverOut(){
+	  $j(this).find(".sub").stop().fadeTo('fast', 0, function() { //Fade to 0 opactiy
+		  $j(this).hide();  //after fading, hide it
+	  });
+	}
+	
+	//Set custom configurations
+	var config = {
+		 sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)
+		 interval: 100, // number = milliseconds for onMouseOver polling interval
+		 over: megaHoverOver, // function = onMouseOver callback (REQUIRED)
+		 timeout: 500, // number = milliseconds delay before onMouseOut
+		 out: megaHoverOut // function = onMouseOut callback (REQUIRED)
+	};
+	
+	$j("ul#topnav li .sub").css({'opacity':'0'}); //Fade sub nav to 0 opacity on default
+	$j("ul#topnav li").hoverIntent(config); //Trigger Hover intent with custom configurations
+});
+</script>
+
+	<meta name="title" content="Nautilus - Filtros para piscinas, capas, motobomba" />
+	<meta name="url" content="http://www.nautilus.ind.br" />
+	<meta name="description" content="Com garantia de qualidade e atendimento, a Nautilus, tradicional fornecedora de equipamentos, acessórios e aquecedores para piscinas, há mais de 25 anos vem atuando de forma expressiva no mercado de piscinas e aquecedores." />
+	<meta name="keywords" content="nautilus, produtos para piscinas, piscinas, aqucedores, fasterm, geradores de cloro, motobombas, acessórios para piscinas" />
+	<meta name="charset" content="ISO-8859-1" />
+	<meta name="autor" content="Rafael Matuoka Chiocchetti" />
+	<meta name="company" content="Agência Econômica" />
+	<meta name="revisit-after" content="5" />
+	<link rev="made" href="mailto:rmatuoka@agenciaeconomica.com.br" />
+
+</head>
+<body>
+<div id="Geral">
+	<div id="Header">
+		<div id="Logo"><%=link_to image_tag("logo.jpg"), home_path%></div>
+		<div id="Login">
+			<!-- 
+			<%=image_tag "tit_amigo_revenda.png"%><br />
+			<input type="text" class="login" /><input type="password" class="senha" />
+			-->
+		</div>
+		<div id="Menu">
+			<ul id="topnav">
+				<li>
+					<a href="javascript:void(0);">Institucional</a>
+					<div class="sub">
+                        <ul>
+                            <li><%=link_to "Sobre a Nautilus", sobre_path%></li>
+							<li><%=link_to "Responsabilidade Social", responsabilidade_social_path%></li>
+							<li><%=link_to "Missão e Visão de Mercado", missao_e_visao_path%></li>
+							<li><%=link_to "Revendas e Representantes", revendas_representantes_path%></li>
+							<!-- <li><a href="#">Locais</a></li> -->
+							<li><%=link_to "Depoimentos", depoimentos_path%></li>
+							<!-- <li><a href="#">Blog</a></li> -->
+                        </ul>
+                    </div>
+				</li>
+				<li><%=link_to "Produtos", linhas_path%></li>
+				<li><%=link_to "Serviços", servicos_path%></li>
+				<li><%=link_to "Downloads", downloads_path%></li>
+				<li><%=link_to "Cases", cases_path%></li>
+				<li><%=link_to "Notícias", noticias_path%></li>
+				<li><%=link_to "Vídeos", videos_path%></li>
+				<li><%=link_to "Contato", sitecontacts_path%></li>
+			</ul>
+		</div>
+	</div>
+	
+	<%=yield :destaques%>
+	
+	<div id="MainContent">
+		<%=yield%>
+	</div>
+	
+	<%=yield :banners%>
+	
+</div>
+
+<%=render :file => "layouts/_footer.html.erb"%>
+
+</body>
+</html>

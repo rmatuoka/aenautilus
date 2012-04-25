@@ -1,0 +1,141 @@
+body 
+{
+	background-image:url("../images/bg_interna.jpg");
+}
+
+#MainContent #Header
+{
+	height:auto;
+	min-height:20px;
+	margin-top:-40px;
+}
+
+	#MainContent #Header #Titulo
+	{
+		float:right;
+		font-family:Cantarell;
+		font-size:34px;
+		color:#1e7da8;
+	}
+	
+	#MainContent #Header h1
+	{
+		float:right;
+		font-family:Cantarell;
+		font-weight:normal;
+		font-size:34px;
+		color:#1e7da8;
+	}
+	
+	#MainContent #Header #Descricao
+	{
+		clear:both;
+		font-family:Verdana;
+		font-size:14px;
+		color:#6C665F;
+	}
+	
+	#MainContent  p
+	{
+		font-family:Verdana;
+		font-size:14px;
+		color:#6C665F;
+	}
+
+#MainContent #Content
+{
+	width:100%;
+	display:table;
+	height:auto;
+	min-height:20px;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+	#MainContent #Content #Noticias
+	{
+		width:359px;
+		height:232px;
+		float:left;
+		background-image:url("../images/bg_box_noticias_int.png");
+		background-repeat:no-repeat;
+		padding-top:50px;
+	}
+	
+	#MainContent #Content #Noticia
+	{
+		width:296px;
+		margin-bottom:20px;
+		margin-left:35px;
+		height:auto;
+		min-height:77px;
+		clear:both;
+	}
+	
+	#MainContent #Content #Noticia p
+	{
+		font-family:Verdana;
+		font-size:10px;
+		color:#6C6660;
+		margin-top:;
+	}
+	
+	#MainContent #Content #Noticia .Botao
+	{
+		float:right;
+	}
+	
+	#MainContent #Content #Noticia .Foto
+	{
+		float:left;
+		width:87px;
+		height:77px;
+	}
+	
+	#Content #Texto
+{
+	width:550px;
+	float:right;
+	height:auto;
+	min-height:100px;
+}
+
+	#Content #Texto p
+	{
+		font-family:Verdana;
+		font-size:13px;
+		color:#6C6660;
+	}
+	
+	#Content #Texto h2
+	{
+		font-family:Cantarell;
+		font-size:20px;
+		color:#1e7da8;
+	}
+
+	.textfield
+	{
+		vertical-align:middle;
+		background-color:#fff;
+		border-top:1px solid #d5d0cc;
+		border-bottom:1px solid #d5d0cc;
+		border-left:none;
+		border-right:none;
+		height:16px;
+		font-family:Verdana;
+		font-size:10px;
+	}
+	
+	.textarea
+	{
+		vertical-align:middle;
+		background-color:#fff;
+		border-top:1px solid #d5d0cc;
+		border-bottom:1px solid #d5d0cc;
+		border-left:none;
+		border-right:none;
+		height:112px;
+		font-family:Verdana;
+		font-size:10px;
+	}

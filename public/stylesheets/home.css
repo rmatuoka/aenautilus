@@ -1,0 +1,112 @@
+body
+{
+	background-image:url("../images/bg_home.jpg");	
+}
+
+#navegar
+{
+	position:relative;
+	float:right;
+	margin-top:-50px;
+	z-index:99;
+}
+
+ #navegar a
+{
+	padding:2px 5px 5px 5px;
+	font-family:Cantarell;
+	color:#19325B;
+	width:21px;
+	height:19px;
+	margin-right:1px;
+	text-align:center;
+	font-size:14px;
+}
+
+#navegar a:hover
+{
+	background-image:url('../images/bg_numeros.png');
+	background-repeat:no-repeat;
+	background-position:0px 3px;
+	color:#FFFFFF;
+}
+
+#navegar .activeSlide
+{
+	background-image:url('../images/bg_numeros.png');
+	background-repeat:no-repeat;
+	background-position:0px 3px;
+	color:#FFFFFF;
+}
+
+#Geral #MainContent #BoxLeft
+{
+	width:470px;
+	height:253px;
+	background-image:url("../images/bg_box_noticias.png");
+	float:left;
+}
+
+	#Geral #MainContent #BoxLeft .Titulo
+	{
+		margin:-25px 0px 0px 220px;
+		height:40px;
+	}
+	
+	#Geral #MainContent #BoxLeft #Noticia
+	{
+		width:395px;
+		margin-bottom:20px;
+		margin-left:35px;
+		height:auto;
+		min-height:77px;
+		clear:both;
+	}
+	
+	#Geral #MainContent #BoxLeft #Noticia p
+	{
+		font-family:Verdana;
+		font-size:10px;
+		color:#6C6660;
+		margin-top:;
+	}
+	
+	#Geral #MainContent #BoxLeft #Noticia .Botao
+	{
+		float:right;
+	}
+	
+	#Geral #MainContent #BoxLeft #Noticia .Foto
+	{
+		float:left;
+		width:87px;
+		height:77px;
+	}
+
+#Geral #MainContent #BoxRight
+{
+	width:470px;
+	height:auto;
+	min-height:253px;
+	float:right;
+}
+
+	#Geral #MainContent #BoxRight .Titulo
+	{
+		margin:-25px 0px 0px 386px;
+		height:40px;
+	}
+	
+	#Geral #MainContent #BoxRight #Video p
+	{
+		font-family:Verdana;
+		font-size:10px;
+		color:#6C6660;
+		margin-top:-4px;
+	}
+	
+	#Geral #MainContent #BoxRight .Botao
+	{
+		float:right;
+		margin-top:6px;
+	}

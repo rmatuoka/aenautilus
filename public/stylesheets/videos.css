@@ -1,0 +1,50 @@
+#Video
+{
+	clear:both;
+	height:auto;
+	min-height:130px;
+	margin-bottom:24px;
+}
+
+	#Video .Imagem
+	{
+		width:;
+		height:;
+		float:left;
+	}
+	
+	#Video .Texto
+	{
+		float:right;
+		width:470px;
+		height:auto;
+		min-height:20px;
+	}
+	
+		#Video .Texto .Data
+		{
+			font-family:Cantarell;
+			font-size:12px;
+			color:#9CBFCB;
+			float:right;
+		}
+		
+		#Video .Texto .Titulo
+		{
+			font-family:Cantarell;
+			font-size:16px;
+			color:#5097B6;
+		}
+		
+		#Video .Texto p
+		{
+			font-family:Verdana;
+			font-size:10px;
+			color:#6C665F;
+			margin:0px;
+		}
+		
+		#Video .Texto .Botao
+		{
+			
+		}

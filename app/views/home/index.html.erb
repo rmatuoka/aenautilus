@@ -1,0 +1,50 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "home" %>
+	<%=stylesheet_link_tag "banners" %>
+	
+	<SCRIPT language="JavaScript">
+	<!--
+	$j(function() {  
+		$j('#Destaque').show(); //exibe a div pai  
+			$j('#Destaque').cycle({  
+			fx:     'fade',  
+			timeout: 5000,  
+			speed: 2000,  
+			next:   '.next',  
+			prev:   '.previous',  
+			pager: '.numbers'  
+		}); 	 
+	});
+	// -->
+	</SCRIPT>
+	
+<%end%>
+
+<%content_for :destaques do%>
+	<%=render :file => "layouts/_destaques.html.erb"%>
+<%end%>
+
+<%content_for :banners do%>
+	<%=render :file => "layouts/_banners.html.erb"%>
+<%end%>
+
+<div id="BoxRight" style="float:right;">
+	<div class="Titulo"><h2><%=image_tag "tit_home_videos.png"%></h2></div>
+	<div id="Video">
+		<%=image_tag "img_video_home.jpg"%>
+		<p>Venha conhecer nossa área de vídeos. Aqui você ficará por dentro de tudo que acontece na Nautilus e em sei meio de trabalho. Visite agora mesmo nosso canal do YouTube.</p>
+	</div>
+	<span class="Botao"><%=link_to image_tag("btn_veja_mais_azul_home.png"), videos_path%></span>
+</div>
+
+
+<div id="BoxLeft">
+	<div class="Titulo"><h2><%=image_tag "tit_home_noticias.png"%></h2></div>
+	<%@NoticiasHome.each do |n|%>
+	<div id="Noticia">
+		<div class="Foto"><%=image_tag(SERVIDOR + n.image.url("home"))%></div>
+		<p><%=n.summary%></p>
+		<span class="Botao"><%=link_to image_tag("btn_veja_mais_lar_home.jpg"), noticia_path(n)%></span>
+	</div>
+	<%end%>
+</div>

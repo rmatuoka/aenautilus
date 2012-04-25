@@ -1,0 +1,54 @@
+<%content_for :page_title do%>
+	- Fale Conosco
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "contato" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/contato.png"%></div>
+	<p id="Descricao">Envie-nos seu contato, dúvida, sugestões ou críticas através do formulário abaixo. Se preferir, entre em contato diretamente pelo telefone 
+<b>55 11 4411-1488</b>.</p>
+</div>	
+
+<div id="Content">
+	<div id="Formulario">
+	<% form_for(@Contato) do |f| %>
+		<span class="label">Departamento</span>
+		<%=f.select :area,([["Suporte","compras@nautilus.ind.br"],["Vendas","vendas@nautilus.ind.br"],["Financeiro","financeiro@nautilus.ind.br"],["Cobrança","cobranca@nautilus.ind.br"],["Suporte","suporte@nautilus.ind.br"],["Assistência Técnica","assistenciatecnica@nautilus.ind.br"]])%>
+		<br><br>
+		
+		<span class="label">Nome</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :name, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Telefone</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :phone, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">E-Mail</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :email, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Empresa</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :company, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Cidade</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :city, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Estado</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :state, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Mensagem</span>
+		<%=image_tag "form_l_t.gif"%><%=f.text_area :message, :class => "textarea", :style => "width:265px;"%><%=image_tag "form_r_t.gif"%>
+		<br><br>
+		
+		<center><span class="Botao"><%= image_submit_tag "btn_enviar.png", :alt => "Enviar" %></span></center>
+	<%end%>
+	</div>
+</div>

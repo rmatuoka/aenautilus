@@ -1,0 +1,32 @@
+<%content_for :page_title do%>
+	- Planilha - Dados da Filtração
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "planilha" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo">Dados pra Filtração</div>
+</div>	
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<p>
+			Dados da Piscina:<br>
+			Comprimento da piscina ( m ): <%=@Sheet.comprimento%><br>
+			Largura da piscina ( m ): <%=@Sheet.largura%><br>
+			Profundidade mínima da piscina ( m ): <%=@Sheet.profundidade_minima%><br> 
+			Profundidade máxima da piscina ( m ): <%=@Sheet.profundidade_max%><br>
+			Volume total da piscina ( m³ ): <%=@Volume%><br>
+			Área da piscina ( m² ): <%=@Area%><br>
+			<br>
+			Sistema Filtrante: <br>
+			Tempo máximo de recirculação ( h ): <%=@TempoMaximoCirculacao%><br>
+			Vazão mínima necessária do conjunto filtrante a ser selecionado (m³/h) : <br>
+		</p>
+	</div>
+</div>

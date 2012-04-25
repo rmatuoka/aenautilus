@@ -1,0 +1,54 @@
+<%content_for :page_title do%>
+	- Produtos - <%=@Section.title%>
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "produtos" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><h1><%=@Section.title%></h1></div>
+</div>	
+
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<div id="Produtos">
+			<%if !@Categorias.empty?%>
+				<%@Categorias.each do |c|%>
+				<div id="Secao">
+					<div class="Titulo"><h2><%=c.title%></h2></div>
+					
+					<div class="Holder">
+						<div class="ImagemCategoria">
+							<%=image_tag(SERVIDOR + c.image.url("image_category"))%>
+						</div>
+						
+						<div class="Textos">
+							<p><%=c.description%><br>
+							<br>
+							<b>Escolha o produto na lista abaixo:</b></p>
+							<%c.products.find(:all, :conditions => ['published = 1']).each do |p|%>
+							<div class="Item">
+								<%=link_to "- " + p.title, linha_categoria_produto_path(@Section, c, p)%>
+							</div>
+							<%end%>
+						</div>
+					</div>
+					
+					
+				</div>
+				<%end%>
+			<%else%>
+				Não há categorias cadastradas nesta linha.
+			<%end%>
+		
+		<center>
+			<%=link_to image_tag("btn_voltar.png"), linhas_path%>
+		</center>
+		</div>
+	</div>
+</div>

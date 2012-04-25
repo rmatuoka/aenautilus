@@ -1,0 +1,23 @@
+<%content_for :page_title do%>
+	- Depoimentos
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "depoimentos" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/depoimentos.png"%></div>
+	<p id="Descricao">Veja alguns depoimentos de revendedores e consumidores Nautilus. </p>
+</div>	
+
+<div id="Content">
+	<%@Depoimentos.each do |d| %>
+	<div id="Depoimento">
+		<!-- <span class="Imagem"><%=image_tag(SERVIDOR + d.image.url("thumb_depo"))%></span> -->
+		<p><i><%=d.testimonial%></i></p>
+		<span class="Infos"><%=d.position%> / <%=d.company%></span> <span class="Nome"><%=d.name%></span> 
+	</div>
+	<%end%>
+</div>

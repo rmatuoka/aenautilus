@@ -1,0 +1,37 @@
+#Cases
+{
+	
+}
+
+#Case
+{
+	width:160px;
+	height:auto;
+	min-height:194px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+	#Case .Imagem
+	{
+		
+	}
+	
+	#Case .Name
+	{
+		background-image:url("../images/bg_case.png");
+		background-repeat:repeat-y;
+		width:160px;
+		height:auto;
+		min-height:30px;
+		text-align:center;	
+	}
+	
+	#Case .Name a
+	{
+		font-family:Cantarell;
+		font-size:14px;
+		color:#4E96B5;
+	}

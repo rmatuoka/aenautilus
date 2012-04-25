@@ -1,0 +1,2 @@
+module ResponsabilidadeSocialHelper
+end

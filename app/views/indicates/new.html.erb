@@ -1,0 +1,37 @@
+<%content_for :page_title do%>
+	- Indique para um amigo
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "indique" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/indique.png"%></div>
+	<p id="Descricao">Indique nosso site para seus amigos, é simples e rápido. Apenas preencha o formulário abaixo.</b>.</p>
+</div>	
+
+<div id="Content">
+	<div id="Formulario">
+		<% form_for(@Indique) do |f| %>
+		<span class="label">Seu Nome</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :name, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Nome do seu amigo</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :friend_name, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">E-Mail do seu amigo</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :friend_mail, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Mensagem</span>
+		<%=image_tag "form_l.gif"%><%=f.text_area :message, :class => "textarea", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<center><span class="Botao"><%= image_submit_tag "btn_enviar.png", :alt => "Enviar" %></span></center>
+		<%end%>
+	</div>
+</div>

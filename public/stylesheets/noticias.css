@@ -1,0 +1,35 @@
+#Lista
+{
+	width:100%;
+	margin-top:50px;
+}
+
+	#Lista #Item
+	{
+		
+		margin-bottom:20px;
+		margin-left:35px;
+		height:auto;
+		min-height:77px;
+		clear:both;
+	}
+	
+		#Lista #Item .Imagem
+		{
+			float:left;
+			width:87px;
+			height:77px;
+		}
+		
+		#Lista #Item p
+		{
+			font-family:Verdana;
+			font-size:10px;
+			color:#6C6660;
+			margin-top:;
+		}
+		
+		#Lista #Item .Botao
+		{
+			float:right;
+		}

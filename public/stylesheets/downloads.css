@@ -1,0 +1,53 @@
+#Busca
+{
+	float:right;
+}
+
+	#Busca img
+	{
+		vertical-align:middle;
+	}
+	
+#Downloads
+{
+	clear:both;
+	margin-top:50px;
+}
+
+	#Downloads #Secao
+	{
+		margin-bottom:22px;	
+	}
+	
+	#Downloads #Secao .Titulo
+	{
+		font-family:Cantarell;
+		font-size:18px;
+		color:#1E7DA7;
+	}
+	
+	#Downloads #Secao .Item
+	{
+		width:550px;
+		height:17px;
+		font-size:12px;
+		color:#6C665F;
+		font-family:Verdana;
+	}
+	
+	#Downloads #Secao .Item a
+	{
+		font-size:12px;
+		color:#6C665F;
+		font-family:Verdana;
+	}
+	
+	#Downloads #Secao img
+	{
+		float:right;
+	}
+	
+	.Claro
+	{
+		background-color:#f7e5d7;
+	}

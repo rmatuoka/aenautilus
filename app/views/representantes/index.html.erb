@@ -1,0 +1,26 @@
+<%content_for :page_title do%>
+	- Encontre o representante mais próximo de você
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "revendas" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/representantes.png"%></div>
+</div>	
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<div id="Parametros">
+			<%=render :partial => "busca"%>
+		</div>
+		
+		<div id="Lista">
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<%content_for :page_title do%>
+	- Depoimentos - Envie o Seu!
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "depoimentos" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/depoimentos.png"%></div>
+	<p id="Descricao">Expresse aqui todos os seus sentimentos sobre a Nautilus. </p>
+</div>	
+
+<div id="Content">
+	<div id="Formulario">
+	<% form_for(@Depoimento) do |f| %>
+		
+		<span class="label">Nome</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :name, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Cargo</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :position, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Empresa</span>
+		<%=image_tag "form_l.gif"%><%=f.text_field :company, :class => "textfield", :style => "width:265px;"%><%=image_tag "form_r.gif"%>
+		<br><br>
+		
+		<span class="label">Mensagem</span>
+		<%=image_tag "form_l_t.gif"%><%=f.text_area :testimonial, :class => "textarea", :style => "width:265px;"%><%=image_tag "form_r_t.gif"%>
+		<br><br>
+		
+		<center><span class="Botao"><%= image_submit_tag "btn_enviar.png", :alt => "Enviar" %></span></center>
+	<%end%>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<%content_for :page_title do%>
+	- Vídeos
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "videos" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/videos.png"%></div>
+	<p id="Descricao">Venha conhecer nossa área de vídeos. Aqui você ficará por dentro de tudo que acontece na Nautilus e em sei meio de trabalho. Visite agora mesmo nosso canal do YouTube.</p>
+</div>	
+
+<div id="Content">
+	<%@Videos.each do |v|%>
+	<div id="Video">
+		<div class="Imagem"><%=image_tag(SERVIDOR + v.image.url("video_img"))%></div>
+		<div class="Texto">
+			<span class="Data"><%=v.created_at.to_date.strftime("%d/%m/%Y")%></span>
+			<span class="Titulo"><%=v.title%></span>
+			<%=v.description%>
+			<span class="Botao"><br>
+				<%=link_to image_tag("btn_assistir.png"), video_path(v)%>
+			</span>
+		</div>
+	</div>
+	<%end%>
+</div>

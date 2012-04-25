@@ -1,0 +1,40 @@
+<%content_for :page_title do%>
+	- Notícias
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "noticias" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/noticias.png"%></div>
+</div>	
+
+<div id="Content">
+	<div id="Noticias">
+		<%@NoticiasHome.each do |n|%>
+		<div id="Noticia">
+			<div class="Foto"><%=image_tag(SERVIDOR + n.image.url("home"))%></div>
+			<p><%=n.summary%></p>
+			<span class="Botao"><%=link_to image_tag("btn_veja_mais_lar_home.jpg"), noticia_path(n)%></span>
+		</div>
+		<%end%>
+	</div>
+	
+	<div id="Texto">
+		<p>
+			Fique por dentro de tudo que acontece na Nautilus e em seu meio de trabalho.
+		</p>
+		
+		<div id="Lista">
+			<%@Noticias.each do |n|%>
+			<div id="Item">
+				<div class="Imagem"><%=image_tag(SERVIDOR + n.image.url("home"))%></div>
+				<p><%=n.summary%></p>
+				<span class="Botao"><%=link_to image_tag("btn_veja_mais_azul_home.png"), noticia_path(n)%></span>
+			</div>
+			<%end%>
+		</div>
+	</div>
+</div>

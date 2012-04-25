@@ -1,0 +1,2 @@
+module IndiqueHelper
+end

@@ -1,0 +1,102 @@
+#Produtos
+{
+	clear:both;
+	margin-top:0px;
+	font-family:Verdana;
+	font-size:13px;
+	color:#6C6660;
+}
+
+	#Produtos #Secao
+	{
+		margin-bottom:22px;
+		padding:5px;
+		background-color:#F7E5D6;
+		clear:both;
+		/*border:1px solid yellow;*/
+		min-height:318px;
+		height:auto;
+	}
+	
+	#Produtos #Secao .Titulo
+	{
+		background-color:#F9EADD;
+		padding:3px;
+	}
+	
+	#Produtos #Secao h2
+	{
+		font-family:Cantarell;
+		font-size:18px;
+		color:#1E7DA7;
+		font-weight:normal;
+		margin:0px;
+		padding:0px;
+	}
+	
+	#Produtos #Secao .Holder
+	{
+		clear:both;
+		/*border:1px solid red;*/
+	}
+	
+	.ImagemCategoria
+	{
+		float:left;
+		width:220px;
+		height:auto;
+		min-height:280px;
+		text-align:left !important;
+	}
+	
+		#Produtos #Secao img
+		{
+			margin-right:30px;
+			margin-top:20px;
+		}
+	
+	
+	#Produtos #Secao .Textos
+	{
+		float:right;
+		/*border:1px solid red;*/
+		width:310px;
+		height:auto;
+		min-height:280px;
+	}
+	
+	#Produtos #Secao .Item
+	{
+		width:550px;
+		height:17px;
+		font-size:12px;
+		color:#6C665F;
+		font-family:Verdana;
+	}
+	
+	#Produtos #Secao .Item a
+	{
+		width:550px;
+		height:17px;
+		font-size:12px;
+		color:#1e7da8;
+		font-family:Verdana;
+	}
+	
+	#Produtos #Secao img
+	{
+		float:right;
+	}
+	
+	.Claro
+	{
+		background-color:#f7e5d7;
+	}
+	
+	#MainContent #Content #FotoProduto
+	{
+		width:359px;
+		height:auto;
+		min-height:232px;
+		float:left;
+	}

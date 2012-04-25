@@ -1,0 +1,150 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "downloads" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/downloads.png"%></div>
+</div>	
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<div id="Busca">
+			<!-- 
+			<%=image_tag "form_l.gif"%><input type="text" class="textfield" style="width:265px;"><%=image_tag "form_r.gif"%>
+			<%=image_tag "btn_buscar.png"%>
+			-->
+		</div>
+		
+		<div id="Downloads">
+			<div id="Secao">
+				<span class="Titulo">Folhetos</span>
+				<div class="Item">
+					<a href="/pdf/Folhetos/BombasDeCalor(Atualizado)_original.pdf" target="_blank"><b>Bombas de Calor</b> - Tamanho: 11 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/Folhetos/FiltrosdeAgua_original.pdf" target="_blank"><b>Filtro Água Potável</b> - Tamanho: 3,6 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/Folhetos/FiltroseMotobombas(atualizado)_original.pdf" target="_blank"><b>Filtros e Motobombas</b> - Tamanho: 12 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/Folhetos/FolhetoAquaclorWeb_original.pdf" target="_blank"><b>Folheto Aquaclor web</b> - Tamanho: 4,3 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/Folhetos/folheto-coletor-solar.pdf" target="_blank"><b>Folheto Coletor Solar</b> - Tamanho: 2,9 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/Folhetos/Folheto_Filtros.pdf" target="_blank"><b>Vedatrin</b> - Tamanho: 2 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>			
+			<div id="Secao">
+				<span class="Titulo">Manuais</span>
+				<div class="Item">
+					<a href="/pdf/manuais/Manual_Aquaclor.pdf" target="_blank"><b>Manual Aquaclor</b> - Tamanho do arquivo: 25,6 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/manuais/Manual_Aquecedor_Aquahot.pdf" target="_blank"><b>Manual Aquahot</b> - Tamanho do arquivo: 4,14 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/manuais/Manual_Aquecedor_serie_Premium.pdf" target="_blank"><b>Manual Aquecedor Série Premium</b> - Tamanho do arquivo: 586 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/manuais/Manual_Aquecedor_solar.pdf" target="_blank"><b>Manual Aquecedor Solar</b> - Tamanho do arquivo: 7,38 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/manuais/Manual_Filtros_e_Bombas.pdf" target="_blank"><b>Manual de Filtros e Bombas</b> - Tamanho do arquivo: 1,12 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/manuais/Manual_Fasterm.pdf" target="_blank"><b>Manual Fasterm</b> - Tamanho do arquivo: 1,27 Mb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/manuais/Manual_Filtro_de_agua_potavel.pdf" target="_blank"><b>Manual Filtro de Água Potável</b> - Tamanho do arquivo: 492 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+			</div>
+			
+			<div id="Secao">
+				<span class="Titulo">Vistas Explodidas</span>
+				<div class="Item">
+					<a href="/pdf/vistas explodidas/Filtro_p_Piscinas F1150P.JPG" target="_blank"><b>Filtro p/ Piscinas F1150P</b></a> - Tamanho do arquivo: 5,39MB
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/vistas explodidas/Filtro_p_Piscinas F950P.JPG" target="_blank"><b>Filtro p/ piscinas F950P</b></a> - Tamanho do arquivo: 136 Kb
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/vistas explodidas/Filtro_p_Piscinas_F280-F300-350P.JPG" target="_blank"><b>Filtros p/ piscinas (F280P/F300P/F350P)</b></a> - Tamanho do arquivo: 136 Kb
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/vistas explodidas/Filtro_p_Piscinas_F450-F550-F650-f750P.JPG" target="_blank"><b>Filtros p/ piscinas (F450P/F550P/F650P/F750P)</b> - Tamanho do arquivo: 248 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/vistas explodidas/Motobombas_Serie_B7NRL-50.JPG" target="_blank"><b>Motobombas - Série B7NRL-50</b> - Tamanho do arquivo: 136 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/vistas explodidas/Motobombas_Serie_B9NRL-50.JPG" target="_blank"><b>Motobombas - Série B9NRL-50</b> - Tamanho do arquivo: 132 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/vistas explodidas/Motobombas_Series_NBFeHM.JPG" target="_blank"><b>Motobombas - Séries NBF e HM</b> - Tamanho do arquivo: 252 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/vistas explodidas/Valvula_Multivias_Bipartida_em_ABS.JPG" target="_blank"><b>Válvula multivias bipartida em ABS</b> - Tamanho do arquivo: 172 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/vistas explodidas/Valvula_Multivias_Em_Ferro_fundido_2_pol.JPG" target="_blank"><b>Válvula multivias em ferro fundido 2 pol.</b> - Tamanho do arquivo: 168 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item Claro">
+					<a href="/pdf/vistas explodidas/Valvula_Multivias_Em_Ferro_fundido_3_pol.JPG" target="_blank"><b>Válvula multivias em ferro fundido 3 pol.</b> - Tamanho do arquivo: 176 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+				
+				<div class="Item">
+					<a href="/pdf/vistas explodidas/Valvula_Multivias_Sextavada_em_ABS.JPG" target="_blank"><b>Válvula multivias sextavada em ABS</b> - Tamanho do arquivo: 160 Kb</a>
+					<%=image_tag "icones/pdf.png"%>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

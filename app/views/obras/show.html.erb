@@ -1,0 +1,58 @@
+<%content_for :page_title do%>
+	- Obras
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "obras" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo">
+			<%if !params[:area].blank?%>
+				<%=params[:area]%>
+			
+			<%=image_tag @Titulo%>
+			<%end%>
+	</div>
+	<p id="Descricao">Veja aqui algumas obras que utilizam a técnologia Nautilus.</p>
+</div>	
+
+<div id="Content">
+	<div id="Noticias">
+		
+		
+		
+		
+		<%@NoticiasHome.each do |n|%>
+		<div id="Noticia">
+			<div class="Foto"><%=image_tag(SERVIDOR + n.image.url("home"))%></div>
+			<p><%=n.summary%></p>
+			<span class="Botao"><%=link_to image_tag("btn_veja_mais_lar_home.jpg"), noticia_path(n)%></span>
+		</div>
+	<%end%>
+	</div>
+	
+	<div id="Texto">
+		<p>
+			<%=@Case.body%>
+		</p>
+		<br><br>
+		<%if !@Imagens.blank?%>
+					   
+		      	<%counter = 0%>
+				<%@Imagens.each do |img|%>
+				<%= lightbox_image_tag(SERVIDOR + img.image.url("thumb"), SERVIDOR + img.image.url("c_medio"), {:class=>"images"}, :title => img.title) %>
+	
+				<%counter = counter + 1
+					
+					if counter > 3
+					%>
+						
+					<%
+						counter = 0
+					end
+				end %>
+		<%end%>
+	</div>
+</div>

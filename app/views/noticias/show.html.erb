@@ -1,0 +1,94 @@
+<%content_for :page_title do%>
+	- Notícias - <%=@Noticia.title%>
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "noticias" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=@Noticia.title%></div>
+</div>	
+
+<div id="Content">
+	<div id="Noticias">
+		<%@NoticiasHome.each do |n|%>
+		<div id="Noticia">
+			<div class="Foto"><%=image_tag(SERVIDOR + n.image.url("home"))%></div>
+			<p><%=n.summary%></p>
+			<span class="Botao"><%=link_to image_tag("btn_veja_mais_lar_home.jpg"), noticia_path(n)%></span>
+		</div>
+		<%end%>
+		
+		<!-- <div id="Noticia">
+			<div class="Foto"><%=image_tag "marcacao/th_not2.jpg"%></div>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<span class="Botao"><%=image_tag("btn_veja_mais_lar_home.jpg")%></span>
+		</div> -->
+	</div>
+	
+	<div id="Texto">
+		<p>
+			<%=@Noticia.body%>
+		</p>
+		<br><br>
+		<%if !@Imagens.blank?%>
+					
+					
+					
+					<!-- GALERIA -->
+					<div class="navi"></div>
+					
+					<!-- "previous page" action -->
+					<a class="prev browse left"></a>
+					
+					<!-- root element for scrollable -->
+					<div class="scrollable" id="browsable">   
+					   
+					   <!-- root element for the items -->
+					   <div class="items">
+					   
+					      	<%counter = 0%>
+							<div>
+							<%@Imagens.each do |img|%>
+							<%= lightbox_image_tag(SERVIDOR + img.image.url("thumb"), SERVIDOR + img.image.url("n_medio"), {:class=>"images"}, :title => img.title) %>
+
+							<%counter = counter + 1
+								
+								if counter > 3
+								%>
+									</div><div>
+								<%
+									counter = 0
+								end
+							end %>
+					      	</div>
+					   </div>
+					   
+					</div>
+					
+					<!-- "next page" action -->
+					<a class="next browse right"></a>
+					
+					<br clear="all" />
+					
+					<!-- javascript coding -->
+					<script>
+					// What is $(document).ready ? See: http://flowplayer.org/tools/documentation/basics.html#document_ready
+					$j(document).ready(function() {
+					
+					// initialize scrollable together with the navigator plugin
+					$j("#browsable").scrollable().navigator();	
+					});
+					</script>
+					
+					<div id="update_foto" class="FotoGrandeGaleria"></div>
+					<%end%>
+					
+					<center>
+						<br><br><br>
+						<%=link_to image_tag("btn_voltar.png"), "javascript:history.go(-1);"%>
+					</center>
+	</div>
+</div>

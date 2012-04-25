@@ -1,0 +1,21 @@
+#Banners
+{
+	width:100%;
+	height:auto;
+	clear:both;
+	padding:20px 0px 20px 0px;
+	text-align:center;
+}
+
+	#Banners ul
+	{
+		list-style-type:none;
+	}
+	
+		#Banners ul li
+		{
+			display:inline-block;
+			margin-right:6px;
+		}
+	
+	

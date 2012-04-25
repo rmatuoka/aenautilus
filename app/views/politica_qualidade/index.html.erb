@@ -1,0 +1,23 @@
+<%content_for :page_title do%>
+	- <%=@Title%>
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "institucional" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag(SERVIDOR + @ImageTitle)%></div>
+</div>	
+
+<div id="Content">
+	
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<p>
+			<%=@Body%>
+		</p>
+	</div>
+</div>

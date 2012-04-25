@@ -1,0 +1,39 @@
+<%content_for :page_title do%>
+	- Obras - <%=params[:area]%>
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "obras" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/obraprimas.png"%></div>
+	<p id="Descricao">Veja aqui algumas obras que utilizam a tecnologia Nautilus. </p>
+</div>	
+
+<div id="Content">
+	<div id="Noticias">
+		<%@NoticiasHome.each do |n|%>
+		<div id="Noticia">
+			<div class="Foto"><%=image_tag(SERVIDOR + n.image.url("home"))%></div>
+			<p><%=n.summary%></p>
+			<span class="Botao"><%=link_to image_tag("btn_veja_mais_lar_home.jpg"), noticia_path(n)%></span>
+		</div>
+	<%end%>
+	</div>
+	
+	<div id="Texto">
+		<%@Cases.each do |c|%>
+		<div id="Case">
+			<div class="Imagem"><%=image_tag(SERVIDOR + c.image.url("c_home"))%></div>
+			<div class="Name"><%=link_to c.title, obra_path(c)%></div>
+		</div>
+		<%end%>
+	</div>
+	
+		
+
+		
+		
+</div>

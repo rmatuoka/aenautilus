@@ -1,0 +1,40 @@
+<%content_for :page_title do%>
+	- Encontre a Revenda mais próxima de você
+<%end%>
+
+<%content_for :head do%>
+	<%=stylesheet_link_tag "internas" %>
+	<%=stylesheet_link_tag "revendas" %>
+<%end%>
+
+<div id="Header">
+	<div id="Titulo"><%=image_tag "titulos/revendas.png"%></div>
+</div>	
+
+<div id="Content">
+	<%=render :file => "layouts/_noticias.html.erb"%>
+	
+	<div id="Texto">
+		<div id="Parametros">
+			<%=render :partial => "busca"%>
+		</div>
+		<%=flash[:msg]%>
+		<div id="Lista">
+			<%if !@Resultados.blank?%>
+				<%@Resultados.each do |r|%>
+					<div class="Item">
+						<span class="Nome"><%=r.name%></span>
+						<span class="Dados">
+							<b>Local:</b> <%=r.city%> / <%=r.state%><br>
+							<b>Bairro:</b> <%=r.zone%><br>
+							<b>CEP:</b> <%=r.cep%><br>
+							<b>Telefone:</b> <%=r.phone%>
+						</span>
+					</div>
+				<%end%>
+			<%else%>
+				Não há revendedores cadastrados nesta cidade
+			<%end%>
+		</div>
+	</div>
+</div>

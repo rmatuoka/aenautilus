@@ -1,0 +1,2 @@
+module RevendasRepresentantesHelper
+end

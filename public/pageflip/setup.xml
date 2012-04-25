@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<data>
+	<setup>
+		<start book="none"/>
+		<background src="background.jpg" type="image" resize="true"/>
+		<buttons toolTips="enabled">
+			<printer toolTip="Imprimir"  description="Selecione sua impressão." cancelText="Go back" selectAll="Select All" state="enabled" icon="icons/printer.png"/>
+			<full toolTip="Deixar tela inteira." state="enabled" icon="icons/full.png"/>
+			<other bgColor="0xCCCCCC" bgAlpha="0.3"/>
+		</buttons>	
+	
+
+		<printer>
+			<alert delay="2000">
+				<started src="Comçando a impressão."/>
+				<canceled src="Impressão cancelada."/>
+			</alert>
+		</printer>
+		
+		
+		<music>
+			<alert delay="2000">	
+				<on src="Aguarde enquanto a música carrega."/>
+				<off src="Musica parada."/>
+			</alert>	
+		</music>
+		
+		<preloading>
+			<background src="Carregando fundo"/>
+			<covers src="Carregando..."/>
+			<book src="Carregando a revista."/>
+			<photo src="Carregando..."/>
+		</preloading>
+		
+		<!-- Contact setup: 
+				here you can setup your email, social icons, also the content that will be displayed on the page and the alerts -->	
+					
+		<contact email="gajkuba@gmail.com" toolTips="enabled">
+			<icons>
+				<twitter url="http://flashden.net/user/mpc" target="_blank" toolTip="Follow me on Twitter" state="enabled"/>
+				<facebook url="http://flashden.net/user/mpc" target="_blank" toolTip="Follow me on Facebook" state="enabled"/>
+				<website url="http://flashden.net/user/mpc" target="_blank" toolTip="Visit my blog" state="enabled"/>
+			</icons>
+			<text>
+				<title src="Contact massiveProCreation"/>
+				<content>
+					<![CDATA[
+email: xyz@xyz.xyz,
+phone: 111-222-333]]>
+				</content>
+				
+				<name src="Name"/>
+				<email src="Email"/>
+				<message src="Message"/>
+				<send src="Send"/>
+				<clear src="Clear"/>
+			</text>
+			<alert delay="2000">
+				<name src="Please input your name."/>
+				<email src="Please input your email."/>
+				<emailError src="Your email address is wrong!"/>
+				<message src="You haven't wrote any message."/>
+				<send src="Your email was sent."/>
+			</alert>		
+		</contact>
+		
+		<tellAFriend toolTips="enabled">
+			<text>
+				<title src="Send link to a friend."/>
+				<yourEmail src="Your Email"/>
+				<email src="Friends Email"/>
+				<message src="Message"/>
+				<send src="Send"/>
+				<clear src="Clear"/>
+			</text>
+			
+			<alert delay="2000">
+				<yourEmail src="Please input your email."/>
+				<email src="Please input friends emai.l"/>
+				<emailError src="Your email address is wrong!"/>
+				<message src="You haven't wrote any message."/>
+				<send src="Your email was sent."/>
+			</alert>		
+		</tellAFriend>
+
+		
+			
+		<copyrights src="Copyright (C) 2010, massiveProCreation" url="http://activeden.net/user/mpc?ref=mpc" target="_blank" state="enabled"/>
+		
+		<other>
+			<arrows state="enabled"/>
+		</other>
+				
+	</setup>
+	
+	
+	<flipbook 
+		width="0" 
+		height="0" 
+		proportion="0.7" 
+		boarder="10" 
+		middleBoarder="0.5" 
+		boarderColor="0xea7330" 
+		boarderAlpha="1" 
+		title="Photography Book" 
+		bitmapSmoothing="true" 
+		doubleClick="true" 
+		resizeSwf="true" 
+		resizeContent="true"
+		resizeTableOfContent="true"
+		zoom="false">
+		
+		<alert>
+			<loadingNext src="Todas as paginas ja foram carregadas."/>
+			<loading src="Todas as paginas ja foram carregadas."/>
+			<pageNumber src="4 páginas"/>
+		</alert>
+	<tableOfContent number="2"/>	
+			
+		<shadows>
+			<inner src="0"/>
+			<curveGlow src="1"/>
+			<pageShadow src="1"/>
+			<innerPageShadow src="1"/>
+		</shadows>
+		
+		<thumbnails>
+			<boarder thickness="5" color="0xea7330"/>
+		</thumbnails>
+		
+		<page src="pages/cover_album.jpg" />
+		
+			<page src="pages/02.jpg" type="content" width="300" height="450">
+				</page>
+		<page src="pages/03.jpg"/>
+		<page src="pages/04.jpg"/>
+		<page src="pages/05.jpg"/>
+
+	</flipbook>
+	
+	
+</data>

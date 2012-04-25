@@ -1,0 +1,28 @@
+#Content
+{
+	text-align:center;
+}
+#Formulario
+{
+	width:468px;
+	text-align:left;
+	margin:auto;
+}
+
+	#Formulario img
+	{
+		vertical-align:middle;
+	}
+	
+	
+	#Formulario .label
+	{
+		width:140px;
+		display:inline-block;
+		text-align:right;
+		margin-right:21px;
+		font-size:14px;
+		font-family:Cantarell;
+		color:#8D847A;
+	}
+	

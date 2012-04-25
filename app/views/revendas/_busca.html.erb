@@ -1,0 +1,14 @@
+<%=form_tag resultado_revendas_path, :method => :post%>
+			Selecione o estado: 
+			<%= collection_select :pessoa, :estado, @Estados, :state, :state %>
+			
+			<div id="cidades" style="display:inline-block;"></div>  
+			
+			<%= image_submit_tag "btn_buscar.png", :alt => "Buscar", :align => "absmiddle" %>
+			
+			<%= observe_field "pessoa_estado",  
+			                      :frequency => 0.25,  
+			                      :url => {:action => "popula_cidades"},  
+			   	                  :with => "'estado='+escape(value)" %>  
+					  
+		</form>

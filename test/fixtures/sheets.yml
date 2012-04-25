@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cliente: MyString
+  endereco: MyString
+  comprimento: 1
+  profundidade_minima: 1
+  profundidade_max: 1
+  uso_piscina: 1
+  temperatura_desejada: 1
+  utilizacao_ano: 1
+  utilizacao_mes: 1
+  tipo_construcao: 1
+  capa_termica: 1
+  velocidade_vento: 1
+  temperatura_ambiente: 1
+  custo_energia: 9.99
+  custo_glp: 9.99
+  custo_gn: 9.99
+  custo_diesel: 9.99
+
+two:
+  cliente: MyString
+  endereco: MyString
+  comprimento: 1
+  profundidade_minima: 1
+  profundidade_max: 1
+  uso_piscina: 1
+  temperatura_desejada: 1
+  utilizacao_ano: 1
+  utilizacao_mes: 1
+  tipo_construcao: 1
+  capa_termica: 1
+  velocidade_vento: 1
+  temperatura_ambiente: 1
+  custo_energia: 9.99
+  custo_glp: 9.99
+  custo_gn: 9.99
+  custo_diesel: 9.99

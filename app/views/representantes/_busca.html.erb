@@ -1,0 +1,7 @@
+<%=form_tag resultado_representantes_path, :method => :post%>
+	Selecione o estado: 
+	<%= collection_select :pessoa, :estado, @Estados, :state, :state %>
+
+	<%= image_submit_tag "btn_buscar.png", :alt => "Buscar", :align => "absmiddle" %>  
+			  
+</form>

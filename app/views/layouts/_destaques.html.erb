@@ -1,0 +1,21 @@
+<div id="Destaque">
+	<%@Destaques.each do |d|%>
+	<div>
+		<div class="Foto">
+			<%=image_tag(SERVIDOR + d.image.url)%>
+		</div>
+		
+		<div class="Texto">
+			<h1><%=d.title%></h1>
+			<p><%=d.description%></p>
+			<br>
+			<span class="Botao"><%=link_to image_tag("destaques/btn_veja_mais.png"), d.link%></span>
+		</div>
+	</div>
+	<%end%>
+	
+	
+</div>
+<div id="navegar">
+	<span class="numbers"></span>
+</div>
