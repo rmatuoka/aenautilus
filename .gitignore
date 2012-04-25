@@ -6,5 +6,4 @@ log/*.log
 tmp/**/*
 config/database.yml
 config/environment.rb
-public/pageflip/**/*
 public/pdf/**/*
