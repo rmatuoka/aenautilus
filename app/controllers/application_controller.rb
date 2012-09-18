@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
   end
   
   def set_p3p
-  response.headers["P3P"]=='CP="CAO PSA OUR"'
+  response.headers["P3P"]='CP="CAO PSA OUR"'
   end
 end
