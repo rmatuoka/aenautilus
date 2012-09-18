@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  before_filter  :set_p3p
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -13,5 +14,9 @@ class ApplicationController < ActionController::Base
   
   def load_highlights
     @Destaques = Highlight.all(:conditions => ['published = 1'], :order => "position ASC")
+  end
+  
+  def set_p3p
+  response.headers["P3P"]=='CP="CAO PSA OUR"'
   end
 end
