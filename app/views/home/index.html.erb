@@ -31,7 +31,7 @@
 <div id="BoxRight" style="float:right;">
 	<div class="Titulo"><h2><%=image_tag "tit_home_videos.png"%></h2></div>
 	<div id="Video">
-		<%=image_tag "img_video_home.jpg"%>
+		<%=link_to image_tag("img_video_home.jpg"), videos_path%>
 		<p>Venha conhecer nossa área de vídeos. Aqui você ficará por dentro de tudo que acontece na Nautilus e em sei meio de trabalho. Visite agora mesmo nosso canal do YouTube.</p>
 	</div>
 	<span class="Botao"><%=link_to image_tag("btn_veja_mais_azul_home.png"), videos_path%></span>
